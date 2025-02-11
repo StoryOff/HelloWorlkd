@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Greet Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Введите ваше имя</h1>
+    <form method="post" action="/Greeting/Greet">
+        <div>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" />
+        </div>
+        <div>
+            <button type="submit">Отправить</button>
+        </div>
+    </form>
+</div>
