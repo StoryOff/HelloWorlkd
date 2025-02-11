@@ -14,11 +14,14 @@ namespace HelloWorlkd.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Greet(string name = "Guest")
+        [HttpGet]
+        public IActionResult Greet(string name)
         {
-            ViewBag.Message = $"Greetings, {name}!";
-            return View();
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                name = "Guest";
+            }
+            return View(model: name);
         }
     }
 }

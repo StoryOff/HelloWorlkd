@@ -4,13 +4,8 @@
 
 <div class="text-center">
     <h1 class="display-4">Введите ваше имя</h1>
-    <form method="post" action="/Greeting/Greet">
-        <div>
-            <label for="name">Имя:</label>
-            <input type="text" id="name" name="name" />
-        </div>
-        <div>
-            <button type="submit">Отправить</button>
-        </div>
+    <form method="get" action="/Greeting/Greet">
+        <input type="text" name="name" placeholder="Enter your name" />
+        <button type="submit">Greet</button>
     </form>
 </div>
